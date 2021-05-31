@@ -1,26 +1,63 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <application></application>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Application from './components/Application'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Application
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		color: var(--font-color);
+		font-size: 16px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	:root {
+		--font-color: hsl(0, 0%, 21%);
+		--heading-color: hsl(0, 0%, 4%);
+		--red-color: hsl(6, 78%, 62%);
+		--red-color-active: hsl(6, 78%, 52%);
+		--red-color-hover: hsl(6, 78%, 47%);
+		--blue-color: hsl(204, 70%, 58%);
+		--blue-color-active: hsl(204, 70%, 48%);
+		--blue-color-hover: hsl(204, 70%, 43%);
+		--yellow-color: hsl(48, 89%, 55%);
+		--yellow-color-active: hsl(48, 89%, 45%);
+		--yellow-color-hover: hsl(48, 89%, 40%);
+		--green-color: hsl(145, 63%, 54%);
+		--green-color-active: hsl(145, 63%, 44%);
+		--green-color-hover: hsl(145, 63%, 39%);
+
+		--smartphone-min-width: 320px;
+		--smartphone-max-width: 480px;
+		--tablet-min-width: 768px;
+		--tablet-max-width: 1024px;
+		--desktop-min-width: 1224px;
+		--large-screen-min-width: 1824px;
+	}
+
+	#app {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+    padding: 30px;
+	}
 </style>
